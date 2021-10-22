@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tess(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 0; i < number; i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function display(N) {
+        let sum = 0;
+        let count = 0;
+        for (let i = 0; count < N; i++) {
+            if (tess[i]) {
+                count++;
+                sum = sum + i;
+            }
+        }
+        document.write("tổng 25 số nguyên tố là : " + "<h2>" + "<i>" + sum);
+    }
+   display(25)
+</script>
+</body>
+</html>

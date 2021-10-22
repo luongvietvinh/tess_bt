@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2><i id="result"></i></h2>
+<script>
+    function check(N) {
+        if (N < 2) {
+            return false;
+        }
+        for (let i = 2; i < N; i++) {
+            if (N % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function display(number) {
+        let sum = 0;
+        let count = 0;
+        for (let i = 0; count < number; i++) {
+            if (check(i)) {
+                count++;
+                sum = sum + i;
+            }
+        }
+        document.getElementById("result").innerHTML = "tổng 25 số nguyên tố đầu tiên là : " + sum
+    }
+    display(25);
+</script>
+</body>
+</html>
